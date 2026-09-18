@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ECO: Última Chance</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="#inicio" class="logo">
+            <span>●</span> ECO
+        </a>
+
+        <div class="menu">
+            <a href="#inicio">Início</a>
+            <a href="#explorar">Explorar</a>
+            <a href="#investigacoes">Investigações</a>
+            <a href="#dados">Dados</a>
+            <a href="#solucoes">Soluções</a>
+        </div>
+
+        <a href="#explorar" class="nav-button">Explorar →</a>
+    </nav>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+
+        <div class="hero-text">
+            <div class="status">
+                <span></span>
+                CENTRO DE MONITORAMENTO AMBIENTAL
+            </div>
+
+            <h1>ECO:<br><strong>ÚLTIMA CHANCE</strong></h1>
+
+            <p class="slogan">
+                O planeta não precisa de heróis.<br>
+                <strong>Precisa de escolhas.</strong>
+            </p>
+
+            <p class="description">
+                Explore os principais desafios ambientais do nosso planeta,
+                entenda suas causas e descubra caminhos para um futuro mais sustentável.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#explorar" class="primary-button">
+                    Explorar o planeta →
+                </a>
+
+                <a href="#investigacoes" class="secondary-button">
+                    Ver investigações
+                </a>
+            </div>
+        </div>
+
+        <div class="planet-area">
+
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+
+            <div class="planet">
+                <div class="continent c1"></div>
+                <div class="continent c2"></div>
+                <div class="continent c3"></div>
+                <div class="continent c4"></div>
+            </div>
+
+            <div class="floating-data data-one">
+                <small>STATUS</small>
+                <strong>ATENÇÃO</strong>
+            </div>
+
+            <div class="floating-data data-two">
+                <small>ÁREAS</small>
+                <strong>06</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPLORAR -->
+    <section id="explorar" class="section explore">
+
+        <div class="section-heading">
+            <span class="section-number">01</span>
+
+            <div>
+                <p class="eyebrow">EXPLORAÇÃO</p>
+                <h2>Explore o planeta.</h2>
+            </div>
+        </div>
+
+        <p class="section-intro">
+            Cada região enfrenta desafios diferentes.
+            Escolha uma área para iniciar sua investigação.
+        </p>
+
+        <div class="areas">
+
+            <button class="area forest" onclick="mostrarArea('florestas')">
+                <span class="area-icon">🌳</span>
+                <span>
+                    <small>01</small>
+                    <strong>Florestas</strong>
+                </span>
+                <b>→</b>
+            </button>
+
+            <button class="area water" onclick="mostrarArea('agua')">
+                <span class="area-icon">💧</span>
+                <span>
+                    <small>02</small>
+                    <strong>Água</strong>
+                </span>
+                <b>→</b>
+            </button>
+
+            <button class="area ocean" onclick="mostrarArea('oceanos')">
+                <span class="area-icon">🌊</span>
+                <span>
+                    <small>03</small>
+                    <strong>Oceanos</strong>
+                </span>
+                <b>→</b>
+            </button>
+
+            <button class="area city" onclick="mostrarArea('cidades')">
+                <span class="area-icon">🏙️</span>
+                <span>
+                    <small>04</small>
+                    <strong>Cidades</strong>
+                </span>
+                <b>→</b>
+            </button>
+
+            <button class="area energy" onclick="mostrarArea('energia')">
+                <span class="area-icon">⚡</span>
+                <span>
+                    <small>05</small>
+                    <strong>Energia</strong>
+                </span>
+                <b>→</b>
+            </button>
+
+            <button class="area waste" onclick="mostrarArea('residuos')">
+                <span class="area-icon">♻️</span>
+                <span>
+                    <small>06</small>
+                    <strong>Resíduos</strong>
+                </span>
+                <b>→</b>
+            </button>
+
+        </div>
+
+        <div id="areaInfo" class="area-info">
+            <div>
+                <span id="infoIcon">🌎</span>
+            </div>
+
+            <div>
+                <p id="infoLabel">SELECIONE UMA ÁREA</p>
+                <h3 id="infoTitle">Comece sua exploração</h3>
+                <p id="infoText">
+                    Clique em uma das áreas acima para descobrir o que está acontecendo.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- INVESTIGAÇÕES -->
+    <section id="investigacoes" class="section investigations">
+
+        <div class="section-heading">
+            <span class="section-number">02</span>
+
+            <div>
+                <p class="eyebrow">INVESTIGAÇÃO</p>
+                <h2>O que está acontecendo?</h2>
+            </div>
+        </div>
+
+        <div class="investigation-content">
+
+            <div class="investigation-main">
+                <span class="alert">● ALERTA AMBIENTAL</span>
+
+                <h3>O desaparecimento<br>das florestas</h3>
+
+                <p>
+                    A perda de áreas florestais afeta a biodiversidade,
+                    o clima, os solos e o equilíbrio dos ecossistemas.
+                </p>
+
+                <div class="investigation-stats">
+                    <div>
+                        <small>PROBLEMA</small>
+                        <strong>Desmatamento</strong>
+                    </div>
+
+                    <div>
+                        <small>IMPACTO</small>
+                        <strong>Ecossistemas</strong>
+                    </div>
+
+                    <div>
+                        <small>AÇÃO</small>
+                        <strong>Preservação</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="investigation-side">
+                <div class="big-number">01</div>
+
+                <div class="line"></div>
+
+                <p>
+                    Entender o problema é o primeiro passo para encontrar
+                    soluções possíveis.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="choice">
+
+            <div>
+                <p class="eyebrow">TOME UMA DECISÃO</p>
+                <h3>Uma região perdeu grande parte de sua vegetação.</h3>
+                <p>Qual medida poderia ajudar a recuperar o ambiente?</p>
+            </div>
+
+            <div class="choice-buttons">
+                <button onclick="resposta('preservar')">
+                    🌱 Investir na recuperação e preservação
+                </button>
+
+                <button onclick="resposta('ignorar')">
+                    Ignorar o problema por enquanto
+                </button>
+            </div>
+
+            <div id="resposta" class="answer"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DADOS -->
+    <section id="dados" class="section data-section">
+
+        <div class="section-heading">
+            <span class="section-number">03</span>
+
+            <div>
+                <p class="eyebrow">MONITORAMENTO</p>
+                <h2>O planeta em dados.</h2>
+            </div>
+        </div>
+
+        <p class="section-intro">
+            Indicadores ilustrativos para representar diferentes
+            desafios ambientais.
+        </p>
+
+        <div class="data-grid">
+
+            <div class="data-card">
+                <div class="data-top">
+                    <span>🌡️</span>
+                    <small>TEMPERATURA</small>
+                </div>
+
+                <strong>+1,5°</strong>
+
+                <div class="bar">
+                    <i style="width: 72%"></i>
+                </div>
+
+                <p>Indicador ilustrativo</p>
+            </div>
+
+            <div class="data-card">
+                <div class="data-top">
+                    <span>💧</span>
+                    <small>ÁGUA</small>
+                </div>
+
+                <strong>64%</strong>
+
+                <div class="bar">
+                    <i style="width: 64%"></i>
+                </div>
+
+                <p>Indicador ilustrativo</p>
+            </div>
+
+            <div class="data-card">
+                <div class="data-top">
+                    <span>♻️</span>
+                    <small>RESÍDUOS</small>
+                </div>
+
+                <strong>48%</strong>
+
+                <div class="bar">
+                    <i style="width: 48%"></i>
+                </div>
+
+                <p>Indicador ilustrativo</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SOLUÇÕES -->
+    <section id="solucoes" class="section solutions">
+
+        <div class="section-heading">
+            <span class="section-number">04</span>
+
+            <div>
+                <p class="eyebrow">POSSIBILIDADES</p>
+                <h2>Agora, as soluções.</h2>
+            </div>
+        </div>
+
+        <div class="solutions-content">
+
+            <div class="solution-intro">
+                <h3>Pequenas ações também alteram grandes sistemas.</h3>
+
+                <p>
+                    A sustentabilidade começa em diferentes lugares.
+                    Escolha uma categoria para descobrir atitudes possíveis.
+                </p>
+            </div>
+
+            <div class="solution-list">
+
+                <button onclick="mostrarSolucao('casa')">
+                    <span>🏠</span>
+                    <strong>Em casa</strong>
+                    <b>→</b>
+                </button>
+
+                <button onclick="mostrarSolucao('escola')">
+                    <span>🏫</span>
+                    <strong>Na escola</strong>
+                    <b>→</b>
+                </button>
+
+                <button onclick="mostrarSolucao('cidade')">
+                    <span>🏙️</span>
+                    <strong>Na cidade</strong>
+                    <b>→</b>
+                </button>
+
+                <button onclick="mostrarSolucao('consumo')">
+                    <span>🛒</span>
+                    <strong>No consumo</strong>
+                    <b>→</b>
+                </button>
+
+            </div>
+
+        </div>
+
+        <div id="solutionResult" class="solution-result">
+            Escolha uma categoria acima.
+        </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+    <section class="final-section">
+
+        <div class="final-circle">ECO</div>
+
+        <p class="eyebrow">SUA ESCOLHA IMPORTA</p>
+
+        <h2>E agora?</h2>
+
+        <p>
+            Grandes mudanças não acontecem de uma única vez.
+            Elas começam quando entendemos o problema e fazemos
+            escolhas diferentes.
+        </p>
+
+        <a href="#inicio" class="primary-button">
+            Voltar ao início ↑
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <div class="footer-logo">● ECO: ÚLTIMA CHANCE</div>
+    <p>Projeto educativo sobre meio ambiente e sustentabilidade.</p>
+    <span>© 2026</span>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
